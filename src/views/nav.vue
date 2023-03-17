@@ -1,0 +1,110 @@
+<script setup>
+import backgroundUrl from "./icon/Logo.svg";
+</script>
+
+<script>
+export default {
+  name: "navBar",
+  name: "data",
+  // data() {
+  //   return {
+  //     buka: false,
+  //   };
+  // },
+};
+</script>
+<template>
+  <!-- nav Awal -->
+  <div class="fixed w-full dark:bg-teal-400 shadow-lg flex justify-around rounded-md">
+    <a
+      href="#"
+      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white"
+    >
+      <svg
+        width="30"
+        height="30"
+        viewBox="0 0 894 894"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="Logo">
+          <g id="mdi:trash-can-empty">
+            <path
+              id="Vector"
+              d="M758.783 331.897L721.533 396.34L269.69 135.59L306.94 71.1475L420.18 136.335L470.84 122.552L632.132 215.678L645.915 266.71L758.783 331.897ZM223.5 707.75V260.75H412.357L670.5 409.75V707.75C670.5 727.509 662.651 746.458 648.679 760.429C634.708 774.401 615.759 782.25 596 782.25H298C278.241 782.25 259.292 774.401 245.321 760.429C231.349 746.458 223.5 727.509 223.5 707.75Z"
+              fill="#35898B"
+            />
+          </g>
+          <g id="ri:exchange-dollar-line">
+            <path
+              id="Vector_2"
+              d="M582.245 595.035C594.276 566.449 597.045 534.812 590.164 504.571C583.282 474.329 567.096 447.005 543.881 426.44C520.665 405.875 491.589 393.102 460.738 389.919C429.888 386.735 398.815 393.3 371.89 408.691L353.496 376.484C381.636 360.401 413.501 351.979 445.912 352.057C478.323 352.135 510.147 360.711 538.208 376.929C621.46 424.989 653.352 527.895 614.544 613.706L639.427 628.058L562.201 669.109L559.142 581.703L582.245 595.035ZM308.755 479.965C296.724 508.551 293.955 540.188 300.836 570.429C307.718 600.671 323.904 627.995 347.119 648.56C370.335 669.125 399.411 681.898 430.262 685.081C461.112 688.265 492.185 681.7 519.11 666.309L537.504 698.516C509.364 714.599 477.499 723.021 445.088 722.943C412.677 722.865 380.853 714.289 352.792 698.071C269.54 650.011 237.648 547.105 276.456 461.294L251.554 446.961L328.78 405.91L331.84 493.315L308.737 479.984L308.755 479.965ZM380.604 574.583H482.583C485.042 574.583 487.4 573.607 489.139 571.868C490.877 570.129 491.854 567.771 491.854 565.313C491.854 562.854 490.877 560.496 489.139 558.757C487.4 557.018 485.042 556.042 482.583 556.042H408.417C396.123 556.042 384.332 551.158 375.639 542.465C366.946 533.772 362.062 521.981 362.062 509.687C362.062 497.394 366.946 485.603 375.639 476.91C384.332 468.217 396.123 463.333 408.417 463.333H426.958V444.792H464.042V463.333H510.396V500.417H408.417C405.958 500.417 403.6 501.393 401.861 503.132C400.123 504.871 399.146 507.229 399.146 509.687C399.146 512.146 400.123 514.504 401.861 516.243C403.6 517.982 405.958 518.958 408.417 518.958H482.583C494.877 518.958 506.668 523.842 515.361 532.535C524.054 541.228 528.937 553.019 528.937 565.313C528.937 577.606 524.054 589.397 515.361 598.09C506.668 606.783 494.877 611.667 482.583 611.667H464.042V630.208H426.958V611.667H380.604V574.583Z"
+              fill="#D6F8F7"
+            />
+          </g>
+        </g>
+      </svg>
+
+      <span class="flex-1 ml-3 whitespace-nowrap font-medium text-lg drop-shadow-lg">Posam</span>
+    </a>
+    <div></div>
+    <div class="flex">
+      <div class="mt-2 font-sans text-lg font-medium text-white drop-shadow-2xl">Inbox</div>
+      <div class="ml-3">
+        <div class="mt-1 ml-2">
+          <button
+            @click="buka = !buka"
+            type="button"
+            class="fixed flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white"
+            id="user-menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="h-10 w-10 rounded-full"
+              src="./icon/account-circle-line.svg"
+              alt=""
+            />
+          </button>
+          <div
+            v-show="buka"
+            class="absolute right-13 z-10 mt-2 w-48 origin-top-right rounded-md bg-blue-100 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="user-menu-button"
+            tabindex="-1"
+          >
+            <!-- Active: "bg-gray-100", Not Active: "" -->
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700"
+              role="menuitem"
+              tabindex="-1"
+              id="user-menu-item-0"
+              >Your Profile</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700"
+              role="menuitem"
+              tabindex="-1"
+              id="user-menu-item-1"
+              >Settings</a
+            >
+            <a
+              href="/"
+              class="block px-4 py-2 text-sm text-gray-700"
+              role="menuitem"
+              tabindex="-1"
+              id="user-menu-item-2"
+              >Sign out</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--nav akhir  -->
+</template>
